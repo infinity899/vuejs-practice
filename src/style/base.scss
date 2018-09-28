@@ -1,0 +1,100 @@
+@import './flexgrid.scss';
+
+// Variables
+//@@@@@@@
+//@@@@@@@
+
+// Colors
+$brand-primary-color: #234460;
+$brand-secondary-color: #646E80;
+$brand-blue-color: #0F95FC;
+$brand-green-color: #22C646;
+$brand-light-color: #FAFBFC;
+
+$dark-gray-color: #414853;
+$dark-gray-color-s: #555F71;
+$dark-gray-color-xs: #646E80;
+$dark-gray-color-xxs: #7D879A;
+$light-gray-color: #939AA6;
+$light-gray-color-s: #A6B1C0;
+$light-gray-color-xs: #C1CAD6;
+$light-gray-color-xxs: #E0E4EB;
+
+// Typography
+$font-family-base: 'Roboto-Regular';
+$f-size-xxl: 41px;
+$f-size-xl: 34px;
+$f-size-l: 28px;
+$f-size-m: 20px;
+$f-size: 16px;
+$f-size-s: 14px;
+
+// Box-shadow
+$brand-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+
+// Brand style
+// @@@@@@
+// @@@@@@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #ffffff, #ecf2ff, #cbeaff, #9ee3ff, #69ddee);
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: $font-family-base;
+  font-weight: 400;
+  color: $dark-gray-color-xs;
+}
+
+h1 {
+  font-size: $f-size-xxl;
+  line-height: 22.86px;
+}
+
+h2 {
+  font-size: $f-size-xl;
+  line-height: 48.57px;
+}
+
+h3 {
+  font-size: $f-size-l;
+  line-height: 40px;
+}
+
+h4 {
+  font-size: $f-size-m;
+  line-height: 28.57px;
+}
+
+h5 {
+  font-size: $f-size;
+  line-height: 22.86px;
+}
+
+h6 {
+  font-size: $f-size-s;
+  line-height: 20px;
+}
+
+p {
+  font-size: $f-size;
+  line-height: 22.86px;
+}
+
+// Card style
+.card {
+  border-radius: 4px;
+  box-shadow: $brand-box-shadow;
+  background-color: $brand-light-color;
+}
