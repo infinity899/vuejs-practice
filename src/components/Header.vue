@@ -1,6 +1,5 @@
 <template>
-  <div class="header">
-    <header>
+    <header class="header">
       <div class="header-container">
         <div class="header-logo">
           <img src="../assets/logo.svg" alt="logo">
@@ -8,17 +7,17 @@
         <div class="header-progress">
           <div class="header-progress-item">
             <div class="header-progress-icon">
-              <img src="../assets/outline-list-24px.svg" alt="progress">
+              <i class="material-icons">format_align_right</i>
             </div>
           </div>
           <div class="header-progress-item">
             <div class="header-progress-icon">
-              <img src="../assets/round-chat-24px.svg" alt="progress">
+              <i class="material-icons">chat</i>
             </div>
           </div>
           <div class="header-progress-item">
             <div class="header-progress-icon">
-              <img src="../assets/outline-refresh-24px .svg" alt="progress">
+              <i class="material-icons">refresh</i>
             </div>
           </div>
         </div>
@@ -27,7 +26,6 @@
         </div>
       </div>
     </header>
-  </div>  
 </template>
 
 <script>
@@ -41,6 +39,7 @@ export default {
   
   header {
     height: 90px;
+    padding: $spacing-xl;
   }
 
   .header-container {
@@ -78,17 +77,21 @@ export default {
         content: '';
         height: 2px;
         width: 80px;
-        background-color: #234361;
+        background-color: $brand-primary-color;
       }
       
       .header-progress-icon {
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid #234361;
+        border: 1px solid $brand-primary-color;
         border-radius: 100%;
         height: 35px;
         width: 35px;
+
+        .material-icons {
+          color: $brand-primary-color;  
+        }
       }
     }
   }
