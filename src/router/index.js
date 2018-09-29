@@ -29,6 +29,10 @@ export default new Router({
       path: '/connect',
       name: 'SocialConnect',
       component: SocialConnect
+    },
+    {
+      path: '/',
+      redirect: 'open-hours'
     }
   ]
 })
