@@ -47,12 +47,12 @@
       </div>
     </div>
     <div class="opening-hours-container">
-      <button class="button-add-hours" @click="addHours"><i class="material-icons">add_circle</i>Add Opening Hours</button>
+      <button class="button-add-hours" @click="addHours" ref="addBtn"><i class="material-icons">add_circle</i>Add Opening Hours</button>
       <div class="opening-hours-wrapper"
-            v-for="item in openingHours" :key="item.id">
+            v-for="item in $store.state.schedule" :key="item.id">
         <p class="opening-day">{{ item.day}}</p>
-        <p class="opening-hour"> {{ item.openingTime}} <span>-</span></p>
-        <p class="closing-hour">{{ item.closingTime }}</p>
+        <p class="opening-hour"> {{ item.openingTime}}:00 <span>-</span></p>
+        <p class="closing-hour">{{ item.closingTime }}:00</p>
       </div>
     </div>
     <div class="opening-hours-info">
@@ -61,7 +61,7 @@
     </div>
     <div class="action-buttons">
       <button class="button button-secondary"><i class="material-icons">arrow_back</i>Back</button>
-      <router-link v-bind:to="'/images'"><button class="button button-primary">Next<i class="material-icons">arrow_forward</i></button></router-link>
+      <router-link v-bind:to="'/images'"><button class="button button-primary" @click="sendSchedule">Next<i class="material-icons">arrow_forward</i></button></router-link>
     </div>
   </div>
 </template>
@@ -70,6 +70,8 @@
 export default {
   data() {
     return {
+      inputsArray: [],
+      disabledCounter: 0,
       selectedOpeningTime: 11,
       selectedClosingTime: 23,
       pickedDays: [],
@@ -143,19 +145,40 @@ export default {
     }
   },
   methods: {
+    disableInputs() {
+      // convert HTML collection of inputs to array
+      this.inputsArray = Array.from(document.getElementsByTagName("input")); 
+      let that = this;
+      this.inputsArray.forEach(function(input) {
+        if(input.checked) {
+          input.click();
+          input.disabled = true;
+          that.disabledCounter++;
+        }
+      })   
+    },
     addHours() {
       if (this.pickedDays.length === 0) {
         alert('please choose a day');
       } else {
         let that = this;
         this.pickedDays.forEach(function(day) {
-          that.openingHours.push({
+          that.$store.state.schedule.push({
           day: day,
           openingTime: that.selectedOpeningTime,
           closingTime: that.selectedClosingTime 
         });
         })
       }
+      this.disableInputs(); // disable picking day after picked hours for it
+      if(this.disabledCounter === 7) {
+        this.$refs.addBtn.disabled = true; // disable add hours if all days got picked hours
+      }
+    },
+    sendSchedule() {
+      // 
+      // eslint-disable-next-line
+      console.log('asdasd');
     }
   }
 }
@@ -256,6 +279,11 @@ export default {
     color: $brand-light-color;
     background-color: $brand-blue-color;
     border: 1px solid $brand-blue-color;
+  }
+
+  input[disabled] + label {
+    background-color: $brand-blue-color;
+    opacity: 0.5;
   }
 
   .button-calendar {
