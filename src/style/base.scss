@@ -151,3 +151,24 @@ button:focus {
 a {
   text-decoration: none;
 }
+
+.component-container {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.section-title {
+  text-transform: uppercase;
+  color: $brand-primary-color;
+  margin-bottom: $spacing-xxl;
+}
+
+.intro-title {
+  color: $brand-primary-color;
+  font-size: $f-size-xl;
+  line-height: 1;
+}
