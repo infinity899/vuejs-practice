@@ -40,8 +40,8 @@
              <div class="opening-hours-wrapper"
                   v-for="item in $store.state.schedule" :key="item.id">
               <p class="opening-day">{{ item.day}}</p>
-              <p class="opening-hour"> {{ item.openingTime}}:00 <span>-</span></p>
-              <p class="closing-hour">{{ item.closingTime }}:00</p>
+              <p class="opening-hour"> {{ item.openingTime}}</p>
+              <p class="closing-hour">{{ item.closingTime }}</p>
           </div>
           </div>
         </div>
@@ -139,6 +139,18 @@ export default {
   h4 {
     color: $brand-primary-color;
   }
+}
+
+.opening-hour {
+  margin-right: $spacing-xs;
+}
+
+.closing-hour:not(:empty)::before {
+  content: '-';
+  width: 4px;
+  height: 1px;
+  background-image: $brand-secondary-color;
+  margin-right: $spacing-xs;
 }
 
 </style>

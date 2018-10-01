@@ -51,8 +51,8 @@
       <div class="opening-hours-wrapper"
             v-for="item in $store.state.schedule" :key="item.id">
         <p class="opening-day">{{ item.day}}</p>
-        <p class="opening-hour"> {{ item.openingTime}}:00 <span>-</span></p>
-        <p class="closing-hour">{{ item.closingTime }}:00</p>
+        <p class="opening-hour"> {{ item.openingTime}}<span>-</span></p>
+        <p class="closing-hour">{{ item.closingTime }}</p>
       </div>
     </div>
     <div class="opening-hours-info">
@@ -61,7 +61,7 @@
     </div>
     <div class="action-buttons">
       <button class="button button-secondary"><i class="material-icons">arrow_back</i>Back</button>
-      <router-link v-bind:to="'/images'"><button class="button button-primary" @click="sendSchedule">Next<i class="material-icons">arrow_forward</i></button></router-link>
+      <router-link v-bind:to="'/images'"><button class="button button-primary" @click="closedDays">Next<i class="material-icons">arrow_forward</i></button></router-link>
     </div>
   </div>
 </template>
@@ -74,6 +74,15 @@ export default {
       disabledCounter: 0,
       selectedOpeningTime: 11,
       selectedClosingTime: 23,
+      sorter: {
+        "mon": 1,
+        "tue": 2,
+        "wed": 3,
+        "thu": 4,
+        "fri": 5,
+        "sat": 6,
+        "sun": 7
+      },
       pickedDays: [],
       openingHours: [],
       openingTimes: [
@@ -146,8 +155,6 @@ export default {
   },
   methods: {
     disableInputs() {
-      // convert HTML collection of inputs to array
-      this.inputsArray = Array.from(document.getElementsByTagName("input")); 
       let that = this;
       this.inputsArray.forEach(function(input) {
         if(input.checked) {
@@ -158,6 +165,8 @@ export default {
       })   
     },
     addHours() {
+      // convert HTML collection of inputs to array
+      this.inputsArray = Array.from(document.getElementsByTagName("input")); 
       if (this.pickedDays.length === 0) {
         alert('please choose a day');
       } else {
@@ -165,8 +174,8 @@ export default {
         this.pickedDays.forEach(function(day) {
           that.$store.state.schedule.push({
           day: day,
-          openingTime: that.selectedOpeningTime,
-          closingTime: that.selectedClosingTime 
+          openingTime: that.selectedOpeningTime + ':00',
+          closingTime: that.selectedClosingTime + ':00'
         });
         })
       }
@@ -175,10 +184,25 @@ export default {
         this.$refs.addBtn.disabled = true; // disable add hours if all days got picked hours
       }
     },
-    sendSchedule() {
-      // 
-      // eslint-disable-next-line
-      console.log('asdasd');
+    closedDays() {
+      // If day is not picked than set the hours as closed
+      let that = this;
+      this.inputsArray.forEach(function(input) {
+        if(!input.disabled) {
+          that.$store.state.schedule.push({
+            day: input.value,
+            openingTime: 'Closed',
+            closingTime: null
+          });
+        }
+      })
+      this.sortDays(); // sort store by days
+    },
+    sortDays() {
+      let that = this;
+      this.$store.state.schedule.sort(function sortByDay(a, b) {
+        return that.sorter[a.day] > that.sorter[b.day];
+      });
     }
   }
 }
