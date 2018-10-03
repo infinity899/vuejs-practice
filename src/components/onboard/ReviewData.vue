@@ -58,6 +58,114 @@
         </div>
       </div>
     </div>
+    <div class="component-container">
+      <h4 class="section-title">Short description</h4>
+      <p>Do you enjoy a steak dinner at Tom's? How about a glass of wine for your dinner? Or even an amazing salad? Then the Tom's Dinner club is for you</p>
+    </div>
+    <div class="component-container">
+      <h4 class="section-title">Long description</h4>
+      <p>The charm of Tom's stake house has little to do with the steak that we serve or our special salad dressing. Is is rooted in the people who walk through our doors. Whether they are regulars, first-timers or guests at a party, each leaves with a special story. We encourage yo to share those stories here, on a spcial "Tom's stories" page. We will feature some of our favourites on our Facebook page!</p>
+    </div>
+    <div class="component-container">
+      <h4 class="section-title">Business sectors</h4>
+      <div class="tag">
+        <p>Food & Drink > Restaurant > Steakhouse</p>
+      </div>
+    </div>
+    <div class="component-container">
+      <h4 class="section-title">Your keywords</h4>
+      <div class="tag">
+        <p>steak house</p>
+      </div>
+      <div class="tag">
+        <p>best burgers</p>
+      </div>
+      <div class="tag">
+        <p>premium beef</p>
+      </div>
+      <div class="tag">
+        <p>steak restaurant</p>
+      </div>
+      <div class="tag">
+        <p>places to eat</p>
+      </div>
+      <div class="tag">
+        <p>quality steak house</p>
+      </div>
+      <div class="tag">
+        <p>where to eat</p>
+      </div>
+      <div class="tag">
+        <p>t bone steak</p>
+      </div>
+    </div>
+    <div class="component-images-container">
+      <h4 class="section-title">Photos</h4>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu6.jpg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu1.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu2.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu3.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu4.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu5.jpeg" alt="menu">
+        </div>
+      </div>
+    </div>
+    <div class="social-wrapper row">
+      <div class="col-lg-4 social-block">
+        <div class="social-media-icon">
+          <img src="../../assets/facebookico.svg" alt="facebook">
+        </div>
+        <h5 class="social-media-title">
+          Facebook
+        </h5>
+        <p class="social-media-user">
+          Connected as: <b>@tomssteakhouse</b>
+        </p>
+        <button class="button button-secondary">DISCONNECT ACCOUNT</button>
+      </div>
+      <div class="col-lg-4 social-block">
+        <div class="social-media-icon">
+          <img src="../../assets/twitter.svg" alt="twitter">
+        </div>
+        <h5 class="social-media-title">
+          Twitter
+        </h5>
+        <p class="social-media-user">
+          Connected as: <b>@tomssteakhouse</b>
+        </p>
+        <button class="button button-secondary">DISCONNECT ACCOUNT</button>
+      </div>
+    </div>
+    <div class="action-buttons">
+      <router-link v-bind:to="'/dashboard'"><button class="button button-primary"><i class="material-icons icon-left">autorenew</i>Synchronise business directories</button></router-link>
+    </div>
   </div>
 </template>
 
@@ -89,8 +197,8 @@ export default {
   background-color: $brand-light-color;
   border: 1px solid $light-gray-color-xxs;
   padding: $spacing-s;
-  width: 150px;
-  height: 150px;
+  width: 218px;
+  height: 218px;
 }
 
 .card-image-container {
@@ -101,6 +209,27 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.component-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: $spacing-xl;
+
+  .card-image {
+    flex-basis: 23%;
+    margin-bottom: $spacing-l;
+
+    &:not(:last-of-type) {
+      margin-right: $spacing-m;
+    }
+  }
 }
 
 .image-logo {
@@ -115,7 +244,7 @@ export default {
   align-items: flex-start;
   
   > * {
-    margin-bottom: $spacing-l;
+    margin-bottom: $spacing-m;
     display: flex;
     align-items: flex-start;
   }
@@ -153,6 +282,33 @@ export default {
   margin-right: $spacing-xs;
 }
 
+.social-wrapper {
+  margin-top: 100px;
+}
+
+.social-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    margin-bottom: $spacing-m;
+  }
+
+  .button {
+    margin-top: auto;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.social-media-title {
+  text-transform: uppercase;
+  color: $brand-secondary-color;
+}
 </style>
 
 

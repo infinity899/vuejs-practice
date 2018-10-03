@@ -49,6 +49,53 @@
       </div>
     </div>
     <div class="component-container">
+      <h4 class="section-title">Other photos</h4>
+      <p>Upload a picture that is best suited to attract your customers. Maximum size 5MB, file format PNG or JPG. Minimul resolution: 720px tall and 720px wide.</p>
+      <p>You can upload as many additional pictures as  you want-some directories may allows more photos than others. Order your photos in order of importance to make sure the best ones appear most often.</p>
+    </div>
+    <div class="component-images-container">
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu6.jpg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu1.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu2.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu3.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu4.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image">
+        <div class="card-image-container">
+          <img src="../../assets/menu5.jpeg" alt="menu">
+        </div>
+      </div>
+      <div class="card-image-browse">
+        <input id="browse" type="file" name="filename" accept="image/gif, image/jpeg, image/png">
+        <i class="material-icons icon-image">image</i>
+        <i class="material-icons icon-add">add_circle</i>
+      </div>
+    </div>
+    <div class="component-container">
       <h4 class="section-title">Youtube url</h4>
       <p>Some directories can display video. Some directories need to have videos uploaded to them, others may only show embedded YouTube videos. It is recommended to upload a video and paste a youtube link to a video about your business</p>
       <div class="video-container">
@@ -175,8 +222,56 @@ export default {
   }
 }
 
-.component-container {
-  margin-top: $spacing-xxxl;
+.component-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: $spacing-xl;
+
+  .card-image,
+  .card-image-browse {
+    flex-basis: 23%;
+    margin-bottom: $spacing-l;
+
+    &:not(:last-of-type) {
+      margin-right: $spacing-m;
+    }
+  }
+}
+
+.card-image-browse {
+  position: relative;
+  height: 208px;
+  border: 1px dotted $brand-secondary-color;
+
+  input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 3;
+    position: relative;
+  }
+
+  .material-icons {
+    position: absolute;
+  }
+
+  .icon-image {
+    color: $dark-gray-color-xxs;
+    font-size: 70px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+  }
+
+  .icon-add {
+    color: $brand-blue-color;
+    font-size: $f-size-xl;
+    left: 56%;
+    top: 50%;
+    z-index: 2;
+  }
 }
 
 .video-container {

@@ -4,21 +4,27 @@
         <div class="header-logo">
           <img src="../assets/logo.svg" alt="logo">
         </div>
-        <div class="header-progress">
+        <div class="header-progress" v-if="!$store.state.hideProgress">
           <div class="header-progress-item">
-            <div class="header-progress-icon">
-              <i class="material-icons">format_align_right</i>
-            </div>
+            <router-link v-bind:to="'/open-hours'">
+              <div class="header-progress-icon">
+                <i class="material-icons">format_align_right</i>
+              </div>
+            </router-link>
           </div>
           <div class="header-progress-item">
-            <div class="header-progress-icon">
-              <i class="material-icons">chat</i>
-            </div>
+            <router-link v-bind:to="'/connect'">
+              <div class="header-progress-icon">
+                <i class="material-icons">chat</i>
+              </div>
+            </router-link>
           </div>
           <div class="header-progress-item">
-            <div class="header-progress-icon">
-              <i class="material-icons">refresh</i>
-            </div>
+            <router-link v-bind:to="'/review'">
+              <div class="header-progress-icon">
+                <i class="material-icons">autorenew</i>
+              </div>
+            </router-link>
           </div>
         </div>
         <div class="header-profile-picture">
@@ -30,7 +36,7 @@
 
 <script>
 export default {
-  
+
 }
 </script>
 
@@ -45,7 +51,7 @@ export default {
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   .header-profile-picture {
@@ -65,9 +71,14 @@ export default {
     }
   }
 
+  .header-logo {
+    margin-right: auto;
+  }
+
   .header-progress {
     display: flex;
     align-items: center;
+    margin-right: auto;
 
     .header-progress-item {
       display: flex;
@@ -90,7 +101,17 @@ export default {
         width: 35px;
 
         .material-icons {
-          color: $brand-primary-color;  
+          color: $brand-primary-color;
+          font-size: $f-size-m;
+        }
+      }
+    }
+
+    .router-link-active {
+      .header-progress-icon {
+        background-color: $brand-primary-color;
+        .material-icons {
+          color: $brand-light-color;
         }
       }
     }

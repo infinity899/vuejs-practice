@@ -4,6 +4,7 @@ import OpenHours from '@/components/onboard/OpenHours'
 import ReviewData from '@/components/onboard/ReviewData'
 import UploadImages from '@/components/onboard/UploadImages'
 import SocialConnect from '@/components/onboard/SocialConnect'
+import Dashboard from '@/components/dashboard/Dashboard'
 
 Vue.use(Router)
 
@@ -33,6 +34,11 @@ export default new Router({
     {
       path: '/',
       redirect: 'open-hours'
+    },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard
     }
   ]
 })

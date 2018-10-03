@@ -3,7 +3,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  schedule: []
+  schedule: [],
+  hideProgress: false,
 }
 export default new Vuex.Store({
   state

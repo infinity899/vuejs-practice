@@ -327,6 +327,8 @@ export default {
 .opening-hours-wrapper {
   display: flex;
   align-items: center;
+  align-items: flex-start;
+  min-width: 205px;
   
   .opening-day {
     text-transform: uppercase;

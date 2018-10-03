@@ -67,22 +67,22 @@ export default {
 }
 
 .social-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    > * {
-      margin-bottom: $spacing-m;
-    }
+  > * {
+    margin-bottom: $spacing-m;
+  }
 
-    .button {
-      margin-top: auto;
-    }
+  .button {
+    margin-top: auto;
+  }
 
-    img {
-      width: 50px;
-      height: 50px;
-    }
+  img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .social-media-title {
