@@ -165,10 +165,37 @@ img {
   text-transform: uppercase;
   color: $brand-primary-color;
   margin-bottom: $spacing-xxl;
+  width: 100%;
 }
 
 .intro-title {
   color: $brand-primary-color;
   font-size: $f-size-xl;
   line-height: 1;
+  margin-bottom: $spacing-xl;
+}
+
+
+.component-container {
+  margin-top: $spacing-xxxl;
+
+  p {
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.tag {
+  display: inline-block;
+  margin-right: $spacing-m;
+
+  p {
+    border: 1px solid $light-gray-color-xs;
+    border-radius: 2px;
+    color: $brand-blue-color;
+    padding: $spacing-s;
+  }
+}
+
+.icon-left {
+  margin-right: $spacing-xs;
 }
