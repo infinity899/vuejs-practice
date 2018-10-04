@@ -4,7 +4,7 @@ Vue.use(Vuex)
 
 const state = {
   schedule: [],
-  hideProgress: false,
+  dashboardFlag: false,
 }
 export default new Vuex.Store({
   state

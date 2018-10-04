@@ -39,7 +39,9 @@ $spacing-xxl: 40px;
 $spacing-xxxl: 60px;
 
 // Box-shadow
-$brand-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+$brand-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1),
+                   0 2px 4px 0 rgba(0, 0, 0, 0.1),
+                   0 2px 6px 0 rgba(0, 0, 0, 0.1);
 
 // Brand style
 // @@@@@@
@@ -58,8 +60,10 @@ body {
 
 #app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 
@@ -123,6 +127,7 @@ button:focus {
   padding: 12px 24px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .button-primary {
@@ -175,18 +180,19 @@ img {
   margin-bottom: $spacing-xl;
 }
 
+.help-text {
+  margin-bottom: $spacing-m;
+}
+
 
 .component-container {
   margin-top: $spacing-xxxl;
-
-  p {
-    margin-bottom: $spacing-xl;
-  }
 }
 
 .tag {
   display: inline-block;
   margin-right: $spacing-m;
+  margin-bottom: $spacing-m;
 
   p {
     border: 1px solid $light-gray-color-xs;
@@ -198,4 +204,8 @@ img {
 
 .icon-left {
   margin-right: $spacing-xs;
+}
+
+.icon-right {
+  margin-left: $spacing-xs;
 }

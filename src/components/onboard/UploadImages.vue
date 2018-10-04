@@ -50,8 +50,8 @@
     </div>
     <div class="component-container">
       <h4 class="section-title">Other photos</h4>
-      <p>Upload a picture that is best suited to attract your customers. Maximum size 5MB, file format PNG or JPG. Minimul resolution: 720px tall and 720px wide.</p>
-      <p>You can upload as many additional pictures as  you want-some directories may allows more photos than others. Order your photos in order of importance to make sure the best ones appear most often.</p>
+      <p class="help-text">Upload a picture that is best suited to attract your customers. Maximum size 5MB, file format PNG or JPG. Minimul resolution: 720px tall and 720px wide.</p>
+      <p class="help-text">You can upload as many additional pictures as  you want-some directories may allows more photos than others. Order your photos in order of importance to make sure the best ones appear most often.</p>
     </div>
     <div class="component-images-container">
       <div class="card-image">
