@@ -234,6 +234,7 @@ export default {
   } 
   
   .widget-button {
+    cursor: pointer;
     padding: 14px 16px;
     margin-right: $spacing-s;
     text-transform: uppercase;
@@ -306,6 +307,7 @@ export default {
   }
 
   input[disabled] + label {
+    cursor: initial;
     background-color: $brand-blue-color;
     opacity: 0.5;
   }

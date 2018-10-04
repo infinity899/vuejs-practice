@@ -138,6 +138,7 @@
       </div>
     </div>
     <div class="social-wrapper row">
+      <h4 class="section-title">Social Media</h4>
       <div class="col-lg-4 social-block">
         <div class="social-media-icon">
           <img src="../../assets/facebookico.svg" alt="facebook">

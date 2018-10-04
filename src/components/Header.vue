@@ -43,9 +43,10 @@ export default {
 <style lang="scss" scoped>
 @import "../style/base.scss";
   
-  header {
+  .header {
     height: 90px;
-    padding: $spacing-xl;
+    padding: $spacing-l;
+    width: 75%;
   }
 
   .header-container {
