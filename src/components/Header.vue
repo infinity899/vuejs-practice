@@ -4,7 +4,7 @@
         <div class="header-logo">
           <img src="../assets/logo.svg" alt="logo">
         </div>
-        <div class="header-progress" v-if="!$store.state.hideProgress">
+        <div class="header-progress" v-if="!$store.state.dashboardFlag">
           <div class="header-progress-item">
             <router-link v-bind:to="'/open-hours'">
               <div class="header-progress-icon">

@@ -7,7 +7,7 @@
     mounted () {
       // Overwriting base render method with actual data.
       this.renderChart({
-        labels: ['January',  'June', 'July', 'November', 'December'],
+        labels: ['January',  'March', 'September', 'Octomber', 'December'],
         datasets: [
           {
             label: 'Social Media',

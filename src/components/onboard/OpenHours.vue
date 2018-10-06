@@ -47,7 +47,7 @@
       </div>
     </div>
     <div class="opening-hours-container">
-      <button class="button-add-hours" @click="addHours" ref="addBtn"><i class="material-icons">add_circle</i>Add Opening Hours</button>
+      <button class="button-text button-add-hours" @click="addHours" ref="addBtn"><i class="material-icons">add_circle</i>Add Opening Hours</button>
       <div class="opening-hours-wrapper"
             v-for="item in $store.state.schedule" :key="item.id">
         <p class="opening-day">{{ item.day}}</p>
@@ -241,6 +241,10 @@ export default {
     background-color: transparent;
   }
 
+  select {
+    min-width: 70px;
+  }
+
   .hours-icon {
     display: flex;
     align-items: center;
@@ -258,12 +262,9 @@ export default {
   align-items: center;
 
   select {
-    /* for Firefox */
     -moz-appearance: none;
-    /* for Chrome */
     -webkit-appearance: none;
   }
-  /* For IE10 */
   select::-ms-expand {
     display: none;
   }
@@ -328,7 +329,6 @@ export default {
 
 .opening-hours-wrapper {
   display: flex;
-  align-items: center;
   align-items: flex-start;
   min-width: 205px;
   
@@ -342,11 +342,8 @@ export default {
 .button-add-hours {
   display: flex;
   align-items: center;
-  background: transparent;
-  border: none;
   font-size: $f-size-s;
   text-transform: uppercase;
-  color: $brand-blue-color;
   margin: $spacing-m 0;
 
   .material-icons {

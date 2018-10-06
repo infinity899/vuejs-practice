@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="246px" height="125px" viewBox="0 0 246 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>map_graphic</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="OVERVIEW---UPSELLING-TRIGGER-01" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-330.000000, -1710.000000)">
+        <g id="map_graphic" transform="translate(333.000000, 1710.000000)">
+            <polygon id="Path-7" stroke="#C1CAD6" stroke-width="3" fill="#FFFFFF" points="20.3267595 83.4594595 178.617349 83.4594595 188.710902 122.278942 0 122.52173"></polygon>
+            <polygon id="Path-14" stroke="#C1CAD6" stroke-width="3" fill="#FFFFFF" points="14.3562478 94.8423423 56.9578866 94.8423423 48.6967447 122.427633 35.3477258 122.427633 41.0111294 106.738848 8.31456005 106.738848"></polygon>
+            <polygon id="Path-5" stroke="#C1CAD6" stroke-width="3" fill="#FFFFFF" points="31.6158897 60.0945946 168.877868 60.0945946 173.66597 74.1564871 24.6 74.1564871"></polygon>
+            <polygon id="Path-8" stroke="#C1CAD6" stroke-width="3" fill="#FFFFFF" points="178.8 59.4954955 202.549273 122.258912 239.583129 122.258912 205.48877 59.4954955"></polygon>
+            <polygon id="Path-15" stroke="#C1CAD6" stroke-width="3" fill="#FFFFFF" points="70.2971865 83.5372336 60.4553124 122.359246 188.687617 122.141243 178.518475 83.5372336"></polygon>
+            <polygon id="Path-13" stroke="#C1CAD6" stroke-width="3" fill="#E0E4EB" points="104.709498 60.0945946 102.6 122.248422 239.617464 122.248422 234.489348 113.052745 115.606603 113.052745 116.74284 60.0945946"></polygon>
+            <path d="M118.5,94.1564871 C104.807461,77.0822495 95.7332195,66.0561529 91.2772746,61.0781974 C85.5075905,54.6325992 82,46.1253626 82,36.8001144 C82,16.6719888 98.3416066,0.354919163 118.5,0.354919163 C138.658393,0.354919163 155,16.6719888 155,36.8001144 C155,46.4240981 151.264078,55.1768205 145.161304,61.6912659 C140.720704,66.4314136 131.833603,77.2531541 118.5,94.1564871 Z M118.5,51.1392075 C127.092102,51.1392075 134.057377,44.184391 134.057377,35.6051899 C134.057377,27.0259889 127.092102,20.0711723 118.5,20.0711723 C109.907898,20.0711723 102.942623,27.0259889 102.942623,35.6051899 C102.942623,44.184391 109.907898,51.1392075 118.5,51.1392075 Z" id="Combined-Shape" fill="#D60600"></path>
+        </g>
+    </g>
+</svg>
