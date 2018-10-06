@@ -194,29 +194,6 @@ export default {
   }
 }
 
-.card-image {
-  background-color: $brand-light-color;
-  border: 1px solid $light-gray-color-xxs;
-  padding: $spacing-s;
-  width: 218px;
-  height: 218px;
-}
-
-.card-image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  img {
-    height: 100%;
-    width: auto;
-  }
-}
-
 .component-images-container {
   display: flex;
   flex-wrap: wrap;
