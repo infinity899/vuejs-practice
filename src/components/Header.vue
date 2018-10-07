@@ -46,7 +46,10 @@ export default {
   .header {
     height: 90px;
     padding: $spacing-l;
-    width: 75%;
+
+    @media screen and (min-width: $desktop) {
+      width: 75%;
+    }
   }
 
   .header-container {
@@ -80,6 +83,10 @@ export default {
     display: flex;
     align-items: center;
     margin-right: auto;
+
+    @media screen and (max-width: $desktop-min) {
+      display: none;
+    }
 
     .header-progress-item {
       display: flex;

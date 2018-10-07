@@ -140,13 +140,23 @@ button:focus {
 .button-primary {
   color: $brand-light-color;
   background-color: $brand-blue-color;
-  border: 1px solid $brand-blue-color
+  border: 1px solid $brand-blue-color;
+
+  &:hover {
+    color: $brand-blue-color;
+    background-color: $brand-light-color;
+  }
 }
 
 .button-secondary {
   color: $brand-blue-color;
   background-color:$brand-light-color;
   border: 1px solid $brand-blue-color;
+
+  &:hover {
+    color: $brand-light-color;
+    background-color: $brand-blue-color;
+  }
 }
 
 .button-text {
@@ -183,6 +193,12 @@ button:focus {
 }
 
 // General style
+.component-intro-text {
+  p {
+    font-size: 18px;
+  }
+}
+
 .action-buttons {
   display: flex;
   justify-content: center;
@@ -268,3 +284,13 @@ img {
 .n-p-b {
   padding-bottom: 0 !important;
 }
+
+// Media queries
+$desktop: 1024px;
+$desktop-min: 1023px;
+
+$bg-screen: 1200px;
+$bg-screen-min: 1199px;
+
+$mobile: 770px;
+$mobile-min: 769px;

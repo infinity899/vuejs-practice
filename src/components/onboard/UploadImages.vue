@@ -1,11 +1,11 @@
 <template>
   <div class="component-container">
     <div class="component-intro-text">
-      <h1 class="intro-title">When are you open for business?</h1>
-      <p>Many directories display the opening hours for your business. This helps customers find the best time to visit or get in contact with you.</p>
+      <h1 class="intro-title">Upload logo and images</h1>
+      <p>Photos help bring life to your listing and will be shown in directories that support photos. These can be used to show your logo, example products, or your store's physical location.</p>
     </div>
     <div class="container-images row">
-      <div class="col-lg-6 image-wrapper">
+      <div class="col-lg-6 col-xs-12 image-wrapper">
         <div class="card-image">
           <div class="card-image-container hidden-icons-container">
            <img src="../../assets/steaklogo.jpeg" alt="logo">
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6 image-wrapper">
+      <div class="col-lg-6 col-xs-12 image-wrapper">
         <div class="card-image">
           <div class="card-image-container">
             <img src="../../assets/FlamedSteaks.jpg" alt="main">
@@ -137,6 +137,9 @@ export default {
 
 .image-wrapper {
   display: flex;
+  @media screen and (max-width: $bg-screen) {
+    margin-bottom: $spacing-l;
+  }
 
   .help-text-container {
     margin-left: $spacing-l;  
@@ -213,6 +216,10 @@ export default {
   align-items: center;
   margin-top: $spacing-xl;
 
+  @media screen and (max-width: $mobile-min) {
+    justify-content: center;
+  }
+
   .card-image,
   .card-image-browse {
     flex-basis: 23%;
@@ -230,8 +237,8 @@ export default {
   border: 1px dotted $brand-secondary-color;
 
   input {
-    width: 100%;
-    height: 100%;
+    width: 218px;
+    height: 218px;
     opacity: 0;
     z-index: 3;
     position: relative;
@@ -262,6 +269,12 @@ export default {
 .video-container {
    margin-top: $spacing-xxxl;
    display: flex;
+
+  @media screen and (max-width: $mobile-min) {
+    align-items: center;
+    flex-direction: column;
+  }
+
 }
 
 .video-details {

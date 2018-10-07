@@ -5,7 +5,7 @@
       <p>Social media links make your website even more relevant and interactive. If you already have social media accounts for your business, you can manually connect them now.</p>
     </div>
     <div class="social-wrapper row">
-      <div class="col-lg-4 social-block">
+      <div class="col-lg-4 col-xs-12 social-block">
         <div class="social-media-icon">
           <img src="../../assets/facebookico.svg" alt="facebook">
         </div>
@@ -17,7 +17,7 @@
         </p>
         <button class="button button-secondary">DISCONNECT ACCOUNT</button> 
       </div>
-      <div class="col-lg-4 social-block">
+      <div class="col-lg-4 col-xs-12 social-block">
         <div class="social-media-icon">
           <img src="../../assets/twitter.svg" alt="twitter">
         </div>
@@ -29,7 +29,7 @@
         </p>
         <button class="button button-secondary">DISCONNECT ACCOUNT</button> 
       </div>
-      <div class="col-lg-4 social-block">
+      <div class="col-lg-4 col-xs-12 social-block">
         <div class="social-media-icon">
           <img src="../../assets/gplus.svg" alt="gplus">
         </div>

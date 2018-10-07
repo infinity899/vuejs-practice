@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="info-container row">
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-xs-12 col-sm-12">
         <div class="info-wrapper">
           <div class="info-title">
             <h4>Address</h4>
@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-xs-12 col-sm-12">
         <div class="info-wrapper">
           <div class="info-title">
             <h4>Opening Hours</h4>
@@ -46,7 +46,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-xs-12 col-sm-12">
         <div class="info-wrapper">
           <div class="info-title">
             <h4>Contact Info</h4>
@@ -59,21 +59,21 @@
       </div>
     </div>
     <div class="component-container">
-      <h4 class="section-title">Short description</h4>
+      <h4 class="section-title">Short description <i class="material-icons">edit</i></h4>
       <p>Do you enjoy a steak dinner at Tom's? How about a glass of wine for your dinner? Or even an amazing salad? Then the Tom's Dinner club is for you</p>
     </div>
     <div class="component-container">
-      <h4 class="section-title">Long description</h4>
+      <h4 class="section-title">Long description <i class="material-icons">edit</i></h4>
       <p>The charm of Tom's stake house has little to do with the steak that we serve or our special salad dressing. Is is rooted in the people who walk through our doors. Whether they are regulars, first-timers or guests at a party, each leaves with a special story. We encourage yo to share those stories here, on a spcial "Tom's stories" page. We will feature some of our favourites on our Facebook page!</p>
     </div>
     <div class="component-container">
-      <h4 class="section-title">Business sectors</h4>
+      <h4 class="section-title">Business sectors <i class="material-icons">edit</i></h4>
       <div class="tag">
         <p>Food & Drink > Restaurant > Steakhouse</p>
       </div>
     </div>
     <div class="component-container">
-      <h4 class="section-title">Your keywords</h4>
+      <h4 class="section-title">Your keywords <i class="material-icons">edit</i></h4>
       <div class="tag">
         <p>steak house</p>
       </div>
@@ -100,7 +100,7 @@
       </div>
     </div>
     <div class="component-images-container">
-      <h4 class="section-title">Photos</h4>
+      <h4 class="section-title">Photos <i class="material-icons">edit</i></h4>
       <div class="card-image">
         <div class="card-image-container">
           <img src="../../assets/menu.jpeg" alt="menu">
@@ -139,7 +139,7 @@
     </div>
     <div class="social-wrapper row">
       <h4 class="section-title">Social Media</h4>
-      <div class="col-lg-4 social-block">
+      <div class="col-lg-4 col-xs-12 social-block">
         <div class="social-media-icon">
           <img src="../../assets/facebookico.svg" alt="facebook">
         </div>
@@ -151,7 +151,7 @@
         </p>
         <button class="button button-secondary">DISCONNECT ACCOUNT</button>
       </div>
-      <div class="col-lg-4 social-block">
+      <div class="col-lg-4 col-xs-12 social-block">
         <div class="social-media-icon">
           <img src="../../assets/twitter.svg" alt="twitter">
         </div>
@@ -188,6 +188,10 @@ export default {
   overflow: hidden;
   height: 212px;
 
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -200,6 +204,10 @@ export default {
   align-items: center;
   margin-top: $spacing-xl;
 
+  @media screen and (max-width: $mobile) {
+    justify-content: center;
+  }
+
   .card-image {
     flex-basis: 23%;
     margin-bottom: $spacing-l;
@@ -211,9 +219,33 @@ export default {
 }
 
 .image-logo {
-  position: relative;
-  top: -104px;
-  left: 43px;
+  @media screen and (min-width: $mobile-min) {
+    position: relative;
+    top: -104px;
+    left: 43px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.info-wrapper {
+  max-width: 310px;
+}
+
+.info-container {
+  .col-sm-12 {
+    @media screen and (max-width: $bg-screen-min) {
+      display: flex;
+      justify-content: center;
+
+      .info-title {
+        justify-content: center;
+      }
+    }
+  }
 }
 
 .info-details-wrapper {
@@ -232,7 +264,8 @@ export default {
   }
 }
 
-.info-title {
+.info-title,
+.section-title {
   display: flex;
   align-items: center;
   margin-bottom: $spacing-xxl;
