@@ -35,11 +35,15 @@ export default {
   .main-container:not(.page-dashboard) {
     background-color: $brand-light-color;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
-    padding: 64px 90px;
-    margin-left: 150px;
     margin-bottom: 80px;
-    width: 1140px;
     height: 100%;
+    padding: $spacing-m;
+
+    @media screen and (min-width: $desktop) {
+      padding: 64px 90px;
+      margin-left: 150px;
+      max-width: 1142px;
+    }
 
     &.page-dashboard {
     }

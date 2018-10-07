@@ -1,8 +1,8 @@
 <template>
   <div class="component-container">
     <div class="component-intro-text">
-      <h1 class="intro-title">Upload logo and images</h1>
-      <p>Photos help bring life to your listing and will be shown in directories that support photos. These can be used to show your logo, example products, or your store's physical location.</p>
+      <h1 class="intro-title">When are you open for business?</h1>
+      <p>Many directories display the opening hours for your business. This helps customers find the best time to visit or get in contact with you.</p>
     </div>
     <div class="business-hours-widget">
       <div class="widget-week-days">
@@ -181,7 +181,7 @@ export default {
       }
       this.disableInputs(); // disable picking day after picked hours for it
       if(this.disabledCounter === 7) {
-        this.$refs.addBtn.disabled = true; // disable add hours if all days got picked hours
+        this.$refs.addBtn.disabled = true; // disable add hours btn if all days got picked hours
       }
     },
     closedDays() {
@@ -261,6 +261,11 @@ export default {
   display: flex;
   align-items: center;
 
+  @media screen and (max-width: $desktop-min) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -273,8 +278,10 @@ export default {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    min-width: 128px;
 
     h6 {
+      margin-bottom: $spacing-s;
       width: 100%;
     }
   }
@@ -286,6 +293,11 @@ export default {
   flex-wrap: wrap;
   flex-basis: 60%;
   margin-right: $spacing-xxl;
+
+  .widget-button {
+    margin-top: $spacing-s;
+    min-width: 63px;
+  }
 
   h6 {
     text-transform: uppercase;
@@ -314,6 +326,7 @@ export default {
   }
 
   .button-calendar {
+    cursor: default;
     width: 65px;
     height: 45px;
   }
